@@ -1,0 +1,201 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+    /* Contact Footer with Image Background */
+.contact-footer {
+    background-image: url('contact-us.jpg.jpg'); /* Your uploaded image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 60px 5% 40px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+/* Dark overlay for text readability */
+.contact-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white; /* Dark overlay */
+    z-index: 1;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0;
+    opacity: 0.95;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.4);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+.contact-subtitle-overlay {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 80%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    gap: 20px;
+}
+
+.footer-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background: black;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px ;
+    transition : all 0.3s ease;
+}
+
+.footer-item:hover {
+    background:black;
+    transform: translateY(-5px);
+}
+
+.footer-icon {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 15px;
+    display: block;
+    transition: transform 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.footer-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.footer-detail {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Image overlay styles */
+.image-overlay {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Dark overlay for img readability */
+.image-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.image-overlay img {
+    display: block;
+    border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-title { 
+        font-size: 2.5rem; 
+    }
+    .contact-subtitle {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+    .footer-links { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    .contact-footer {
+        background-attachment: scroll; /* Better mobile performance */
+    }
+}
+</style>
+
+<div class="contact-footer">
+        <div class="contact-content">
+            <div class="image-overlay">
+                <img src="https://images.unsplash.com/photo-1599995903128-531fc7fb694b?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="500" width="1000" alt="img">
+                <h1 class="overlay-text contact-title">CONTACT US</h1>
+                <p class="contact-subtitle contact-subtitle-overlay">Need expert? You are more welcome to leave your contact info and we will touch shortly</p>
+            </div>
+        <div class="footer-links">
+            <link rel="stylesheet" href="contact.css"/>
+            <div class="footer-item">
+                <i class="fas fa-home footer-icon"></i>
+                <div class="footer-label">Visit us</div>
+                <div class="footer-detail">built flow Campus</div>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-phone footer-icon"></i>
+                <div class="footer-label">Call us</div>
+                <div class="footer-detail">+91 1400 007</div>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-envelope footer-icon"></i>
+                <div class="footer-label">Contact us</div>
+                <div class="footer-detail">Admin@gmail.com</div>
+            </div>
+        </div>
+</div>

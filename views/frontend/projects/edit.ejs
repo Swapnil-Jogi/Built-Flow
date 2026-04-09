@@ -1,0 +1,57 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+    <h3>Edit Your Project</h3>
+    <form method="POST" action="/project/<%= project._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" name="Project[name]" value="<%= project.name %>" class="form-control" required />
+        <div class="valid-feedback">Name looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="Project[description]" class="form-control" required><%= project.description %></textarea>
+        <div class="invalid-feedback">Please Enter a Short description</div>
+      </div>
+
+      <div class="mb-3">
+        Original listing Image <br />
+        <img src="<%= originalImageUrl %>"/>
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input type="file" name="Project[image]" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" name="Project[location]" value="<%= project.location %>" class="form-control" required />
+        <div class="invalid-feedback">Location should be valid</div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="budget" class="form-label">Budget</label>
+          <input type="number" name="Project[totalBudget]" value="<%= project.totalBudget %>" class="form-control" required />
+          <div class="invalid-feedback">Budget should be valid</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="startDate" class="form-label">Start Date</label>
+        <input type="date" class="form-control" value="<%= project.created_at %>" id="startDate" required>
+        <div class="invalid-feedback">Date should be valid</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="endDate" class="form-label">End Date</label>
+        <input type="date" class="form-control" value="<%= project.updated_at %>" id="endDate" required>
+        <div class="invalid-feedback">Date should be valid</div>
+      </div>
+      <button class="btn btn-dark add-btn mt-3">Edit</button>
+    </form>
+    <br />
+  </div>
+</div>

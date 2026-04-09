@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+    <br />
+    <h3>Update Material</h3>
+    <form method="POST" action="/inventory/material/<%= material._id %>?_method=PUT" novalidate class="needs-validation">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name of Material</label>
+        <input type="text" name="Material[name]" value="<%= material.name %>" class="form-control" required />
+        <div class="invalid-feedback">Name should be valid</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="supplier" class="form-label">Supplier Name</label>
+        <input type="text" name="Material[supplier]" value="<%= material.supplier %>" class="form-control" required />
+        <div class="invalid-feedback">Supplier should be valid</div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" name="Material[price]" value="<%= material.price %>" class="form-control" required />
+          <div class="invalid-feedback">Price should be valid</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Stock</label>
+          <input type="number" name="Material[stock]" value="<%= material.stock %>" class="form-control" required />
+          <div class="invalid-feedback">Stock should be valid</div>
+        </div>
+      </div>
+      <button class="btn btn-dark add-btn mt-3">Update</button>
+    </form>
+    <br />
+  </div>
+</div>

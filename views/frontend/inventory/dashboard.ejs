@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate") %>
+  <h1>Inventory Dashboard</h1>
+  <div class="inv">
+    <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+      <div class="card-header"><b>Total products</b></div>
+      <div class="card-body">
+        <h5 class="card-title"><%= count %></h5>
+        <p class="card-text">The Total of all Material in the inventory.</p>
+      </div>
+    </div>
+    <div class="card text-bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Total Stock</div>
+      <div class="card-body">
+        <h5 class="card-title"><%= Total %></h5>
+        <p class="card-text">The Total Stock of Materials in the inventory.</p>
+      </div>
+    </div>
+    <div class="card text-bg-warning mb-3" style="max-width: 18rem;"> 
+      <div class="card-header">Order Today</div>
+      <div class="card-body">
+        <h5 class="card-title">0</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+      </div>
+    </div> 
+    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">  
+      <div class="card-header">&nbsp;&nbsp;&nbsp;&nbsp;Revenue</div>
+      <div class="card-body">
+        <h5 class="card-title">&#8377;<%= revenue %></h5>
+        <p class="card-text">The total amount of income generates after the sale of materials in the inventory.</p>
+      </div>
+    </div>
+  </div>
+  <div class="Status"></div>

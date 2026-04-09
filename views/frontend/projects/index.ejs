@@ -1,0 +1,29 @@
+<% layout("/layouts/boilerplate") %>
+<div>
+  <% if(currUser.role == "Admin" || currUser.role == "Project_Manager" ) { %>
+  <form action="/project/new" method="GET">
+    <button class="btn btn-dark add-btn mt-3 add">Add new Project</button>
+  </form>
+  <% } %>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+      <% for(let project of allProjects) { %>
+      <a href="/project/<%= project._id %>" class="project-link">
+        <div class="card col project-card">
+          <img 
+            src="<%= project.image.url %>" 
+            class="card-img-top" 
+            alt="project_image" 
+            style="height: 20rem;"
+          />
+          <div class="card-img-overlay"></div>
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= project.name %></b><br />
+              <%= project.location %>
+            </p>
+          </div>
+        </div>
+      </a>
+      <% } %>
+  </div>
+</div>

@@ -1,0 +1,267 @@
+body {
+  font-family: 'plus Jakarta Sans', 'sans-serif' !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.starting {
+  background-color: #E3D1BA !important;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white !important;
+}   
+
+.navbar-brand {
+  color: #FF5201 !important;
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/* Starting */
+.getstart {
+  /* border: 2px solid black; */
+  /* border-radius: 12px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  margin-left: 225px;
+  /* background-color: #E3D1BA; */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.getstart .head .title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 65px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.getstart .head {
+  margin-top: 30px;
+  border: 1px solid #222222;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: orange;
+}
+
+.getstart button {
+  padding: 2px 50px 2px 50px;
+}
+
+.getstart .lst {
+  border: 1px solid #222222;
+  border-radius: 12px;
+  width: 200px;
+}
+
+/* Cards */
+.project-card {
+  border: none !important;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+
+/* Show Page */
+.show-img {
+  height: 45vh;
+}
+
+.btns {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.edit-btn {
+  background-color: darkorange !important;
+}
+
+.add {
+  margin-left: 85%;
+}
+
+.coffee-btn {
+  background-color: #A67B5B !important; /* coffee brown */
+  color: white !important;
+  border: none;
+}
+
+.coffee-btn:hover {
+  background-color: #5a3e2b !important;
+}
+
+.mini-card {
+  border: 2px solid black !important;
+  border-radius: 1rem !important;
+  margin-bottom: 25px;
+}
+
+.mini-card:hover {
+  box-shadow: 8px 8px 8px gray
+}
+
+.mini-card .card-title {
+  margin-left: 38px;
+}
+
+.mini-card .card-text {
+  margin-left: 15px;
+  margin-bottom: 20px !important;
+}
+
+.Cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.Quote {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 65px;
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 180px;
+  margin-top: 100px;
+}
+
+.Quote .h1 {
+  margin-left: 400px;
+}
+
+.error {
+  margin-bottom: 390px !important;
+}
+
+.login {
+  margin-bottom: 240px;
+}
+
+.inv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.inv .card-header {
+  padding-left: 80px;
+}
+
+.inv .card-body .card-title {
+  margin-left: 120px;
+}
+
+.Status {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.Status .card-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.container {
+  margin-bottom: auto;
+}
+
+.material-block {
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.material-block .card-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inv-btns {
+  display: flex;
+}
+
+.order_div {
+  height: 70vh;
+}
+
+.payment_div {
+  height: 70vh
+}
+
+.place_order {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}

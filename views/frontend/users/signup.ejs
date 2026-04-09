@@ -1,0 +1,56 @@
+<% layout("/layouts/boilerplate") %>
+  <body>
+    <div class="row mt-3">
+      <h1 class="col-6 offset-3">SignUp &nbsp;on &nbsp;Built-Flow</h1> <br /><br />
+      <div class="col-6 offset-3">
+        <form action="/signup" method="POST" novalidate class="needs-validation">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input name="username" id="username" type="text" class="form-control" required/>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input name="email" id="email" type="email" class="form-control" required/>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input name="password" id="password" type="password" class="form-control" required/>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="exampleRadios1" value="Admin">
+              <label class="form-check-label" for="exampleRadios1">
+                Admin
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="exampleRadios2" value="Project_Manager">
+              <label class="form-check-label" for="exampleRadios2">
+                Project Manager
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="exampleRadios3" value="Accountant">
+              <label class="form-check-label" for="exampleRadios3">
+                Accountant
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="exampleRadios3" value="Site_Manager">
+              <label class="form-check-label" for="exampleRadios3">
+                Site Manager
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="exampleRadios3" value="User" checked>
+              <label class="form-check-label" for="exampleRadios3">
+                User
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-success mb-3">SignUp</button>
+        </form>
+      </div>
+    </div>
+  </body>

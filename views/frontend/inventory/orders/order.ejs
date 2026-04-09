@@ -1,0 +1,36 @@
+<% layout("/layouts/boilerplate") %>
+<h5 class="btn btn-danger">This page is under maintainance</h5>
+<h1>My Orders</h1>
+  <br /><br />
+  <div class="material-block">
+    <div class="card col material-card">
+      <div class="card-body">
+        <h4 class="card-text">
+          <b>Name</b>
+          <b>Supplier</b>
+          <b>Price</b>
+          <b>Stock</b>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <% for(let material of allMaterials) { %>
+  <div class="material-block mb-2">
+    <div class="card col material-card">
+      <div class="card-body">
+        <h4 class="card-text">
+          <b><%= material.name %></b>
+          <b><%= material.supplier %></b>
+          <b><%= material.price %></b>
+          <b><%= material.stock %></b>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <% } %>
+  <div>
+    <form action="/inventory/payment" method="GET">
+      <button class="btn btn-dark add-btn mt-3 add">Pay Now</button>
+    </form>
+  </div>

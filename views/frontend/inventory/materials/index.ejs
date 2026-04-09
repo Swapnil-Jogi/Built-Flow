@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate") %>
+  <h1>Materials</h1>
+  <% if(currUser.role == "Admin" || currUser.role == "Site_Manager" ) { %>
+  <form action="/inventory/material/new" method="GET">
+    <button class="btn btn-dark add-btn mt-2 add">Add Material</button>
+  </form>
+  <% } %>
+  <br /><br />
+  <div class="material-block">
+    <div class="card col material-card">
+      <div class="card-body">
+        <h4 class="card-text">
+          <b>Name</b>
+          <b>Supplier</b>
+          <b>Price</b>
+          <b>Stock</b>
+          <b>Material Action</b>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <% for(let material of allMaterials) { %>
+  <div class="material-block mb-2">
+    <div class="card col material-card">
+      <div class="card-body">
+        <h4 class="card-text">
+          <b><%= material.name %></b>
+          <b><%= material.supplier %></b>
+          <b><%= material.price %></b>
+          <b><%= material.stock %></b>
+          <div class="inv-btns">
+            <% if(currUser.role == "Admin" || currUser.role == "Site_Manager" ) { %>
+            <a class="btn btn-outline-info" href="/inventory/material/<%= material._id %>/edit">Update</a>
+            <form method="POST" action="/inventory/material/<%= material._id %>?_method=DELETE">
+              <button class="btn btn-outline-danger">Delete</button>
+            </form>
+            <% } %> 
+            <% if(currUser.role == "User" || currUser.role == "Project_Manager"){ %>
+            <a class="btn btn-outline-info" href="/inventory/material/order/<%= material._id %>">Place Order</a>  
+            <% } %>
+          </div>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <% } %>
